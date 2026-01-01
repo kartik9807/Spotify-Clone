@@ -1,0 +1,53 @@
+.border{
+    border: 2px solid red;
+}
+.flex{
+    display: flex;
+}
+.justify-content{
+    justify-content: center;
+}
+.align-items{
+    align-items: center;
+}
+.bg-black{
+    background-color: #000;
+    color: white;
+}
+.bg-grey{
+    background-color: #292929;
+}
+.invert{
+    filter: invert(1);
+}
+.m-1{
+    margin: 8px;
+}
+.p-1{
+    padding: 16px;
+}
+.rounded{
+    border-radius: 8px;
+}
+
+/* *extra Content*  */
+::-webkit-scrollbar {
+    width: 6px;    
+}
+::-webkit-scrollbar-track {
+    background: #323232;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.45);
+}
+::-webkit-scrollbar-button {
+    display: none;
+}
+.cardContainer::-webkit-scrollbar {
+    width: 6px;
+}
+

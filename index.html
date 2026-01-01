@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+</head>
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="closePannel">
+                    <div class="logo"><img class="invert" src="svgs/logo.svg" alt=""></div>
+                    <div class="close">
+                        <img class="invert" src="svgs/close.svg" alt="" width="28">
+                    </div>
+                </div>
+                <ul>
+                    <li><img class="invert" src="svgs/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="svgs/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+            <div class="library rounded bg-grey m-1 p-1">
+                <div class="heading m-1">
+                    <img class="invert" src="svgs/playlist.svg" alt="">
+                    <h2>Your Library</h2>
+                </div>
+                <div class="songList">
+                    <ul>
+                        <li>
+                            <img class="invert" src="svgs/music.svg" alt="">
+                            <div class="info">
+                                <div>song name</div>
+                                <div>song artist</div>
+                            </div>
+                            <div class="playnow">
+                                <img class="invert" src="svgs/play.svg" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer m-1">
+                    <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                    <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-grey rounded m-1">
+            <div class="header">
+                <div class="nav flex" style="justify-content: center;align-items: center;gap: 8px;">
+                    <div class="hamburger">
+                        <img class="invert" width="40" src="svgs/hamburger.svg" alt="" style="cursor: pointer;">
+                    </div>
+                    <div id="albumPrev"><svg style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6L9.70711 11.2929C9.37377 11.6262 9.20711 11.7929 9.20711 12C9.20711 12.2071 9.37377 12.3738 9.70711 12.7071L15 18" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
+                    <div id="albumNext"><svg style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L14.2929 12.7071C14.6262 12.3738 14.7929 12.2071 14.7929 12C14.7929 11.7929 14.6262 11.6262 14.2929 11.2929L9 6" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg></div>
+                </div>
+                <div class="buttons">
+                    <div class="install-btn" onmouseover="this.style.transform='scale(1.05)';this.querySelector('button').style.color='#f0f0f0';" onmouseout="this.style.transform='scale(1)';this.querySelector('button').style.color='#acacac';">
+                        <img class="invert" src="svgs/install.svg" alt="">         
+                        <a href="https://play.google.com/store/search?q=spotify&c=apps&hl=en"><button class="installbtn">Install App</button></a>
+                    </div>
+                    <button class="signbtn">Sign up</button>
+                    <button class="loginbtn">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyPlaylist">
+                <h1>Spotify Playlist</h1>
+                <div class="cardContainer"></div>
+            </div>
+            <div class="playbar">
+                <div class="panel">
+                    <div class="songInfo"></div>
+                    <div class="songbuttons">
+                        <img id="prev" src="svgs/prevSong.svg" alt="prevBtn">
+                        <img id="play" src="svgs/play.svg" alt="playBtn">
+                        <img id="next" src="svgs/nextSong.svg" alt="nextBtn">
+                    </div>
+                    <div class="songDuration"></div>
+                    <div class="volume">
+                        <img class="invert" width="20" src="svgs/high_volume.svg" alt="">
+                        <div class="volumebar">
+                            <input type="range" name="volume" id="range" value="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="seekbar rounded">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
